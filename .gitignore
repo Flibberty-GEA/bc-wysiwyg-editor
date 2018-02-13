@@ -43,5 +43,5 @@ testem.log
 Thumbs.db
 
 # styleshets will be generated from SCSS
-/src/app/*.css
-/src/assets/*.css
+/src/app/**/*.css
+/src/assets/**/*.css
