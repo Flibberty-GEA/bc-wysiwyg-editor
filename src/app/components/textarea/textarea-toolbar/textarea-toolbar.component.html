@@ -1,0 +1,8 @@
+<div class="textarea-tools-container" *ngIf="config['showToolbar']">
+  <div class="toolbar-set">
+    <button type="button" class="toolbar-button" (click)="triggerCommand('link')"
+            title="Insert/Edit Link" [disabled]="!config['enableToolbar']">
+      <i class="fa fa-link" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>

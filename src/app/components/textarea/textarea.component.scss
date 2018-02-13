@@ -1,0 +1,65 @@
+@import "../../../assets/styles/color-scheme";
+
+.textarea-container {
+  margin-top: 0px !important;
+  width:100%;
+  border-radius: 0;
+  overflow-y: scroll !important;
+}
+
+.enter-link-form {
+  position: absolute; top: -10%; right: 5%;
+  width: 580px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5) !important;
+  background-color: #ffffff !important;
+}
+
+.input-link {
+  width: 100px;
+}
+
+
+.textarea-label {
+  font-size: 18px;
+  margin-bottom: 0 !important;
+}
+
+input,
+input:active,
+input:hover,
+input:focus,
+textarea,
+textarea:active,
+textarea:hover,
+textarea:focus,
+.textarea-container,
+.textarea-container:active,
+.textarea-container:hover,
+.textarea-container:focus
+{
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  outline: none !important;
+}
+.textarea-container {
+  background-color: $white !important;
+  height: 192px;
+}
+
+.textarea-container,
+textarea {
+  border-radius: 0;
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align:left;
+  text-transform: none;
+  margin: 2px 2px 7px 2px;
+  padding: 5px;
+  border: 2px solid $gray;
+  color: $darker-gray;
+  background-color: $white;
+  width: 100%;
+}
+
+

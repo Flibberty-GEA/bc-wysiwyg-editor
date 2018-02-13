@@ -1,8 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
+import { BrowserModule }  from '@angular/platform-browser';
+import { NgModule }       from '@angular/core';
+import { FormsModule }    from '@angular/forms';
+import { CommonModule }   from '@angular/common';
+import { AppComponent }   from './app.component';
+import { TextareaModule } from './components/textarea/textarea.module';
+import { CommandExecutorService } from './services/command-executor.service';
 
 
 @NgModule({
@@ -10,9 +12,17 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    CommonModule,
+    TextareaModule
   ],
-  providers: [],
+  exports: [
+    FormsModule,
+    CommonModule,
+    TextareaModule
+  ],
+  providers: [ CommandExecutorService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

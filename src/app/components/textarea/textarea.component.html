@@ -1,0 +1,57 @@
+<div id="{{title}}" class="form-group no-margin no-padding">
+  <p class="textarea-label" style="margin-top: 8px;">{{title}}</p>
+  <div class="row w-100 no-gutters">
+    <div class="col-12 w-100 no-gutters" style="padding-right: 0px; padding-left: 0px;">
+      <app-textarea-toolbar [config]="configTextarea" (execute)="showLinkForm()"></app-textarea-toolbar>
+    </div>
+    <div class="col-12 w-100">
+      <div #box contenteditable="true"
+           class="textarea-container"
+           placeholder="Enter Message Here"
+           (input)="onInput($event)"
+           [innerHTML]="inputContent"></div>
+    </div>
+    <div *ngIf="isLinkFormShown" class="enter-link-form">
+      <form #linkForm="ngForm"
+            (ngSubmit)="executeCommand()">
+        <div class="row p-2 w-100 no-gutters justify-content-between">
+          <div class="col-9">
+            <div class="row justify-content-between">
+              <div class="col-2">
+                <label>Text:</label>
+              </div>
+              <div class="col-10">
+                <input id="name"
+                       type="text"
+                       name="name"
+                       class="pull-right input-link"
+                       placeholder=""
+                       maxlength="254"
+                       ngModel>
+              </div>
+            </div>
+            <div class="row justify-content-between">
+              <div class="col-2">
+                <label>URL:</label>
+              </div>
+              <div class="col-10">
+                <input id="href"
+                       type="text"
+                       name="href"
+                       class="pull-right input-link"
+                       placeholder="http://"
+                       maxlength="254"
+                       ngModel>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 align-items-end">
+            <button type="submit"
+                    class="btn"
+                    [disabled]="linkForm.invalid">Add link</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

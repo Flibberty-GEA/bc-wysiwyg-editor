@@ -1,0 +1,35 @@
+@import "../../../../assets/styles/color-scheme";
+
+.textarea-tools-container  {
+  border-radius: 0;
+  border: 2px solid $gray;
+  background-color: $lighter-gray;
+  margin: 2px 2px -2px 2px;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+
+  .toolbar-set {
+    display: inline-block;
+
+    .toolbar-button {
+      min-width: 2.5rem;
+      float: left;
+
+      &:hover {
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      &:focus,
+      &.focus {
+        outline: 0;
+      }
+
+      &:disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

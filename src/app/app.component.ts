@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bc-wysiwyg-editor';
+
+  setMessageBody(output: string): void {
+    console.log('message body: ', output);
+  }
 }
