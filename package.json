@@ -7,10 +7,14 @@
     "start": "npm run node-sass & ng serve",
     "start:watch": "npm run node-sass & ng serve --open & onchange './src/**/*.scss' -- npm run node-sass",
     "build": "ng build --prod",
-    "test": "ng test",
+    "build:prod": "npm run clean:dist & npm run node-sass & ng build --prod",
+    "test": "npm run node-sass & ng test --code-coverage --watch false -sm=false",
+    "test:watch": "npm run node-sass & ng test --code-coverage --browsers=Chrome -sm=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "node-sass": "node-sass ./src -o ./src"
+    "node-sass": "node-sass ./src -o ./src",
+    "clean:dist": "npm run rimraf -- dist",
+    "rimraf": "rimraf"
   },
   "private": true,
   "dependencies": {
